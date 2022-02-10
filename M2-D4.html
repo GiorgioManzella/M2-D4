@@ -69,10 +69,17 @@
             placeholder="name"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
+            id="names"
           />
           
           <div class="input-group-append">
-            
+            <button
+            class="btn btn-outline-secondary"
+            type="button"
+            onclick=
+          >
+            Add
+          </button>
           </div>
 
         </div>
@@ -83,7 +90,12 @@
       <div class="row">
         <div id="box1" class="col-6 text-center">
           <ol>
-            <li></li>
+            <li>nome1</li>
+            <li>nome1</li>
+            <li>nome1</li>
+            <li>nome1</li>
+            <li>nome1</li>
+            <li>nome1</li>
           </ol>
         </div>
         <div id="box2" class="col-6 text-center">
@@ -111,15 +123,42 @@
 
       let addTeam = function(){
         let numberOfTeam = document.getElementById('numberOfTeam').value
-        for (i=0;i<=parseInt(numberOfTeam);i++){
+        for (i=0;i<parseInt(numberOfTeam);i++){
           console.log(numberOfTeam)
         let container1 = document.getElementById('container1')
         let newColumn = document.createElement('div')
-        newColumn.classList.add('text-center','bg-secondary','col-6')
-        let insideText = document.createTextNode(i)
-        newColumn.appendChild(insideText)
+        newColumn.classList.add('text-center','bg-secondary','col-4')
+        let list = document.createElement('ol')
+        let listItem = document.createElement('li')
+        list.appendChild(listItem)
+        newColumn.appendChild(list)
         container1.appendChild(newColumn)
+        
         }}
+
+
+      let namesArray 
+      
+      
+      let names = []
+      
+      
+      let getNames= function(){
+        let names = document.getElementById('names').value
+        console.log(names)
+        for (let index = 0; index < names.length; index++) {
+          let newli = document.createElement('li')
+          let container = document.querySelectorAll('ul')
+          newli.innerText(names[index])
+          container.appendChild(newli)
+          
+        }
+        
+
+
+      }
+
+
 
     </script>
 
