@@ -43,6 +43,7 @@
       <div class="row">
         <div class="input-group mb-3">
           <input
+          id="numberOfTeam"
             type="number"
             class="form-control"
             placeholder="Number of teams"
@@ -62,7 +63,7 @@
           </div>
         <div class="input-group mb-3">
           <input
-          id="numberOfTeam"
+          
             type="text"
             class="form-control"
             placeholder="name"
@@ -105,13 +106,13 @@
     ></script>
     <script>
 
-let numberOfTeam = document.getElementById('numberOfTeam').value
+
 
 
       let addTeam = function(){
         let numberOfTeam = document.getElementById('numberOfTeam').value
-        for (i=0;i<=numberOfTeam;i++){
-          
+        for (i=0;i<=parseInt(numberOfTeam);i++){
+          console.log(numberOfTeam)
         let container1 = document.getElementById('container1')
         let newColumn = document.createElement('div')
         newColumn.classList.add('text-center','bg-secondary','col-6')
